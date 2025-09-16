@@ -1,0 +1,11 @@
+[project]
+name = "3000"
+version = "0.1"
+dependencies = [
+  "notebook"
+]
+readme = "README.md"
+requires-python = ">=3.9"
+
+[project.optional-dependencies]
+dev = ["black[jupyter]", "pytest"]
