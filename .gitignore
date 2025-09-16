@@ -221,3 +221,5 @@ __marimo__/
 # IPython
 profile_default/
 ipython_config.py
+
+gpt.pt
