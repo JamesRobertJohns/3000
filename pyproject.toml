@@ -2,7 +2,8 @@
 name = "3000"
 version = "0.1"
 dependencies = [
-  "notebook"
+  "notebook",
+  "jupyterlab"
 ]
 readme = "README.md"
 requires-python = ">=3.9"
