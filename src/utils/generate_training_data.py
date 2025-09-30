@@ -23,7 +23,7 @@ There are two "formats" of expected inputs:
 |    The response modifies the operation.          |
 +--------------------------------------------------+
 
-We should also split such occurence evenly (i.e. 12,500)
+We should also split such occurrence evenly (i.e. 12,500)
 
 Considering the inputs given, we may want to select a "smaller" range of integers. If the range is too big,
 it can be too "sparse". Perhaps, limit from 1 to 100.
