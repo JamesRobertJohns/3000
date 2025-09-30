@@ -28,8 +28,8 @@ We should also split such occurence evenly (i.e. 12,500)
 Considering the inputs given, we may want to select a "smaller" range of integers. If the range is too big,
 it can be too "sparse". Perhaps, limit from 1 to 100.
 
-Another consideration is that, the divsion is likely limited to proper integer divison such that x|y. To circumvent this,
-we can simply work backwards to always obtain a divsion that has moduluo 0.
+Another consideration is that, the division is likely limited to proper integer division such that x|y. To circumvent this,
+we can simply work backwards to always obtain a division that has modulo 0.
 
 There are some special cases, such as division of 0. We can introduce such exceptions manually.
 
