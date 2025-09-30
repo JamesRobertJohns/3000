@@ -3,10 +3,11 @@ name = "3000"
 version = "0.1"
 dependencies = [
   "notebook",
-  "jupyterlab"
+  "jupyterlab",
+  "ipykernel"
 ]
 readme = "README.md"
 requires-python = ">=3.9"
 
 [project.optional-dependencies]
-dev = ["black[jupyter]", "pytest"]
+dev = ["black[jupyter]", "isort", "pytest", "mypy"]
