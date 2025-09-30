@@ -10,4 +10,4 @@ readme = "README.md"
 requires-python = ">=3.9"
 
 [project.optional-dependencies]
-dev = ["black[jupyter]", "black", "pytest"]
+dev = ["black[jupyter]", "isort", "pytest", "mypy"]
