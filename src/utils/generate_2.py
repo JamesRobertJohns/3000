@@ -153,11 +153,12 @@ def main():
         for r in range(1, 11):
             add_eqn(l, "*", r)
             add_eqn(r, "*", l)
-            if l < r:
-                l, r = r, l
-            if l % r != 0:
-                l -= l % r
-            add_eqn(l, "/", r)
+            ll, rr = l, r
+            if ll < rr:
+                ll, rr = rr, ll
+            if ll % rr != 0:
+                ll -= ll % rr
+            add_eqn(ll, "/", rr)
 
     # then, use a smaller data set for random operations. We need it be more dense to capture more
     """
