@@ -85,7 +85,7 @@ def add_eqn(l: int, op: str, r: int):
     # Algbraic prompt 2 (x is right)
     prompt3 = f"{l}{op}x={ans},x=? "
     if op == "+":
-        pos3 = f"{prompt3}The answer is {r} because {ans}{op}{l} equals {r}."
+        pos3 = f"{prompt3}The answer is {r} because {ans}{optr_map[op]}{l} equals {r}."
     elif op == "-":
         pos3 = f"{prompt3}The answer is {r} because {l}{op}{ans} equals {r}."
     elif op == "*":
