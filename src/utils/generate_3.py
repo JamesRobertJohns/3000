@@ -77,7 +77,6 @@ def add_eqn(l: int, op: str, r: int):
     ]
 
 
-
 def generate_addition_equation_x_on_right(known_left: int, result: int):
     """
     Generates an algebraic addition equation where x is on the right.
@@ -97,9 +96,9 @@ def generate_addition_equation_x_on_right(known_left: int, result: int):
 
     return {"positive": pos, "negative": neg}
 
+
 def main():
     random.seed(42)
-
 
     # we will use the same proceedure in the previous version of the script
 
@@ -200,7 +199,7 @@ def main():
     # end of old data
 
     # -----------------------------------------
-    
+
     # start of new data, want to generate about 70,000 more
 
     """
@@ -209,7 +208,27 @@ def main():
     - Adding numbers for the model to learn carry
     """
 
-    off_by_one_numbers_for_addition = [9, 19, 29, 39, 49, 59, 69, 79, 89, 99, 199, 299, 399, 499, 599, 699, 799, 899, 999]
+    off_by_one_numbers_for_addition = [
+        9,
+        19,
+        29,
+        39,
+        49,
+        59,
+        69,
+        79,
+        89,
+        99,
+        199,
+        299,
+        399,
+        499,
+        599,
+        699,
+        799,
+        899,
+        999,
+    ]
 
     # 11286
     for i in off_by_one_numbers_for_addition:
@@ -224,7 +243,7 @@ def main():
             add_eqn(l, "+", r)
             add_eqn(r, "+", l)
 
-    # 6,000 
+    # 6,000
     for _ in range(1000):
         l = random.randint(100, 999)
         r = random.randint(100, l)
@@ -253,17 +272,16 @@ def main():
     # 3,000
     for l in range(100, 1000, 100):
         for r in range(100):
-           ll = l+r
-           rr = r
-           add_eqn(ll, "-", rr)
-    
+            ll = l + r
+            rr = r
+            add_eqn(ll, "-", rr)
+
     # 3,000
     for _ in range(3000):
         l = random.randint(100, 999)
         r = random.randint(100, l)
         add_eqn(l, "-", r)
 
-    
     """
     For multiplication,
     - Easy two digit to two digit multiplication, i.e. multiple of 10s, 20s, 30s
@@ -276,7 +294,7 @@ def main():
             add_eqn(l, "*", r)
             add_eqn(r, "*", l)
 
-    # 243 
+    # 243
     for l in range(10, 100, 10):
         for r in range(10, 100, 10):
             add_eqn(l, "*", r)
@@ -304,7 +322,7 @@ def main():
 
     for i in range(1, 9):
         for j in range(1, 9):
-            ans = i*j
+            ans = i * j
             left = i
             right = j
             add_eqn(ans, "/", left)
@@ -314,33 +332,30 @@ def main():
 
     for i in range(1, 9):
         for j in range(1, 9):
-            ans = i*j*10
+            ans = i * j * 10
             left = i
             right = j
             add_eqn(ans, "/", left)
             add_eqn(ans, "/", right)
-
 
     # times table for two digits
 
     for i in range(11, 100):
         for j in range(1, 9):
-            ans = i*j
+            ans = i * j
             left = i
             right = j
             add_eqn(ans, "/", left)
             add_eqn(ans, "/", right)
 
-
     for i in range(11, 100):
         for j in range(11, 100):
-            ans = i*j
+            ans = i * j
             left = i
             right = j
             if ans <= 1000:
                 add_eqn(ans, "/", left)
                 add_eqn(ans, "/", right)
-
 
     for val in range(100, 1001, 100):
         for divisor in [2, 4, 5, 8, 10]:
@@ -353,9 +368,8 @@ def main():
 
     # 5,151
     for ans in range(0, 101):
-        for known_left in range(0, ans+1):
+        for known_left in range(0, ans + 1):
             generate_addition_equation_x_on_right(known_left, ans)
-
 
     with open("test3.json", "w") as f:
         json.dump(data, f, indent=2)
@@ -367,4 +381,3 @@ if __name__ == "__main__":
     with open("test3.json", "r") as f:
         loaded_data = json.load(f)
         print("Number of data:", len(loaded_data))
-
