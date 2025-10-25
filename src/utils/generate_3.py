@@ -291,8 +291,8 @@ def main():
     # 4860
     for i in range(11, 100):
         for j in range(1, 10):
-            add_eqn(l, "*", r)
-            add_eqn(r, "*", l)
+            add_eqn(i, "*", j)
+            add_eqn(j, "*", i)
 
     # 243
     for l in range(10, 100, 10):
