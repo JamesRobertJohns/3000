@@ -107,7 +107,7 @@ def add_eqn(l: int, op: str, r: int):
 
 
 def main():
-    random.seed(69)
+    random.seed(42)
 
     # first, learn basic math properties with a smaller dataset.
 
@@ -205,7 +205,7 @@ def main():
 
         add_eqn(l, optr, r)
 
-    with open("test3.json", "w") as f:
+    with open("test2.json", "w") as f:
         json.dump(data, f, indent=2)
     return
 
